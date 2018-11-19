@@ -1,7 +1,7 @@
 import datetime
 
-class user(object):
 
+class user(object):
     def __init__(self, name):
         self.name = name
         self._logged_in = False
@@ -25,13 +25,6 @@ class user(object):
     def log_in(self):
         self._logged_in = True
         self.last_logged_in_at = datetime.datetime.now()
-
-user1 = user("Stanley")
-user1.log_in()
-print(user1.last_logged_in_at)
-        """
-        This function returns the user last login status
-        """
         return(self.last_logged_in_at)
 
     def log_in(self):
@@ -45,3 +38,8 @@ print(user1.last_logged_in_at)
 
         self._logged_in = False
 
+if __name__ == "__main__":
+    user1 = user('Stan')
+    user1.log_in()
+    print(user1.last_logged_in_at)
+        
