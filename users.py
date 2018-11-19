@@ -1,11 +1,13 @@
 import datetime
-
+import time
 
 class user(object):
-    def __init__(self, name):
+    def __init__(self, name, password):
         self.name = name
         self._logged_in = False
         self.last_logged_in_at = None
+        self.username = self.get_name(),
+        self.password = password
 
     def get_name(self, value=None):
         """
@@ -27,6 +29,9 @@ class user(object):
         self.last_logged_in_at = datetime.datetime.now()
         return(self.last_logged_in_at)
 
+    def sign_up_user(self):
+        return "You have successfully signed up and logged in"
+        
     def log_in(self):
         """
         This function returns the user last login time record
@@ -37,9 +42,12 @@ class user(object):
     def log_out(self):
         self._logged_in = False
 
+
 if __name__ == "__main__":
-    user1 = user(str(input('Hey whats your name\n')))
-    user1.log_in()
-    print("hey "+user1.get_name()+" welcome to the blog section")
-    print("logged in at "+str(user1.last_logged_in_at))
-        
+    username = str(input('Please input your desired username\n'))
+    password = str(input('Hey input your desired password\n'))
+    user1 = user( username , password)
+    print(user1.sign_up_user())
+    print('Loading recent Comments')
+    time.sleep(1)
+

@@ -22,5 +22,5 @@ class comment(object):
         def created_at(self):
             return(self.created_at)
 
-comment1 = comment("user", "message is here")
+comment1 = comment("John Doe", "Hello there")
 print(comment1.author + ' commented: ' + comment1.message)
