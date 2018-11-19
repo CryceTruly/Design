@@ -35,11 +35,11 @@ class user(object):
         self.last_logged_in_at = datetime.datetime.now()
 
     def log_out(self):
-
         self._logged_in = False
 
 if __name__ == "__main__":
-    user1 = user('Stan')
+    user1 = user(str(input('Hey whats your name\n')))
     user1.log_in()
-    print(user1.last_logged_in_at)
+    print("hey "+user1.get_name()+" welcome to the blog section")
+    print("logged in at "+str(user1.last_logged_in_at))
         
