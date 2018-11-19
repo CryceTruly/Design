@@ -4,7 +4,6 @@ A blog mock command line tool
 A blog type app writen in python3
 
 <!-- Images -->
-![Blog Ocon](https://images.pexels.com/photos/459688/pexels-photo-459688.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
 
 # Features
 ### Users:
